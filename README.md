@@ -6,8 +6,8 @@ Generates alerts in standard bootstrap.
 
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/roudrik/jquery-jquery-bootstrap-alert/master/dist/jquery.jquery-bootstrap-alert.min.js
-[max]: https://raw.github.com/roudrik/jquery-jquery-bootstrap-alert/master/dist/jquery.jquery-bootstrap-alert.js
+[min]: https://raw.github.com/roudrik/jquery-jquery-bootstrap-alert/master/dist/jquery-bootstrap-alert.min.js
+[max]: https://raw.github.com/roudrik/jquery-jquery-bootstrap-alert/master/dist/jquery-bootstrap-alert.js
 
 In your web page:
 
