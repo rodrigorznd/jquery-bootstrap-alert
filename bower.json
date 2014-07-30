@@ -1,7 +1,9 @@
 {
   "name": "jquery-bootstrap-alert",
   "version": "",
-  "dependencies": {},
+  "dependencies": {
+    "handlebars": "1.3.0"
+  },
   "devDependencies": {
     "qunit": "~1.12.0",
     "jquery": "~2.1.1"
