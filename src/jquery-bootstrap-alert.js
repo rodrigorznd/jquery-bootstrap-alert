@@ -60,7 +60,7 @@
     }
       
     var alert = $.bsAlert.buildAlert(options);
-    return $(this).prepend(alert);
+    return $(alert).prependTo(this);
   };
 
   // Static method.
