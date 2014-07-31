@@ -60,7 +60,9 @@
     }
       
     var alert = $.bsAlert.buildAlert(options);
-    return $(alert).prependTo(this);
+    var alert = $(alert).prependTo(this);
+    $(alert).trigger('opened.bs.alert');
+    return alert;
   };
 
   // Static method.
@@ -73,20 +75,25 @@
     type: 'warning',
     title: '',
     message: '',
-    dismiss: false,
+    icon: true,
+    dismiss: true,
     buttons: false
   };
     
-  $.bsAlert.sourceAlert = "<div id={{id}} class='alert alert-{{type}}' role='alert'>" +
-                            "{{#unless dismiss}}" +
+  $.bsAlert.sourceAlert = "<div id={{id}} class='fade in alert alert-{{type}}' role='alert'>" +
+                            "{{#if dismiss}}" +
                                 "<button type='button' class='close' data-dismiss='alert'>" +
                                   "<span aria-hidden='true'>×</span>" +
                                   "<span class='sr-only'>Close</span>" +
                                 "</button>" +
-                              "{{/unless}}" +
+                              "{{/if}}" +
                               "{{#if title}}<strong>{{title}}</strong>{{/if}}" +
-                              "<p>{{message}}</p>" +
-                              // TODO buttons
+                              "<p>" +
+                                "{{#if icon}}" +
+                                  "<i></i>" +
+                                "{{/if}}" + 
+                                "{{message}}" +
+                              "</p>" +
                               "{{#if buttons}}" +
                                 "<p>" +
                                   "{{#each buttons}}" +
