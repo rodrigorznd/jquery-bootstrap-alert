@@ -29,8 +29,11 @@
         setTimeout(function() {
            $('#'+options.id).alert('close');
         }, options.dismiss.timeout * 1000);
+      } 
+      if(typeof options.dismiss.button === "undefined") {
+          options.dismiss = true;
       } else {
-          options.dismiss = false;
+          options.dismiss = options.dismiss.button;
       }
     }
        
